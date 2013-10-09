@@ -30,10 +30,10 @@ from steadymark.six import text_type
 
 
 def test_find_doctest_code_with_titles():
-    (u"SteadyMark should find doctest and use the "
+    ("SteadyMark should find doctest and use the "
      "previous header as title")
 
-    md = u"""# test 1
+    md = """# test 1
 a paragraph
 
 ```python
@@ -51,10 +51,10 @@ a paragraph
 
 
 def test_find_python_code_with_titles():
-    (u"SteadyMark should find python code and use the "
+    ("SteadyMark should find python code and use the "
      "previous header as title")
 
-    md = u"""# test 1
+    md = """# test 1
 a paragraph
 
 ```python
@@ -72,9 +72,9 @@ raise ValueError('boom')
 
 
 def test_keeps_scope_from_test_to_test():
-    (u"SteadyMark should accumulate the scope throughout the python code snippets")
+    ("SteadyMark should accumulate the scope throughout the python code snippets")
 
-    md = u"""# test 1
+    md = """# test 1
 a paragraph
 
 ```python

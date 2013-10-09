@@ -28,7 +28,7 @@ it will be used as title for your test.
 
 ```python
 from sure import expect
-assert expect(u"Gabriel Falcao".lower()).equals(u"gabriel falcao")
+assert expect("Gabriel Falcao".lower()).equals("gabriel falcao")
 ```
 
 ## python can add numbers

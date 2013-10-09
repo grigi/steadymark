@@ -138,10 +138,10 @@ class SteadyMark(BaseRenderer):
             item = self._tests[-1]
 
         else:
-            item[u'code'] = text_type(code).strip()
+            item['code'] = text_type(code).strip()
 
         if 'title' not in item:
-            item[u'title'] = u'Test #{0}'.format(len(self._tests))
+            item['title'] = 'Test #{0}'.format(len(self._tests))
             self._tests.append({})
 
     def header(self, title, level):
@@ -149,8 +149,8 @@ class SteadyMark(BaseRenderer):
         t = re.sub(r'^[# ]*(.*)', '\g<1>', t)
         t = re.sub(r'`([^`]*)`', '\033[1;33m\g<1>\033[0m', t)
         self._tests.append({
-            u'title': t,
-            u'level': int(level),
+            'title': t,
+            'level': int(level),
         })
 
     def postprocess(self, full_document):

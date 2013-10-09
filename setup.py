@@ -49,9 +49,9 @@ if not PY3:
 
 setup(name='steadymark',
     version=version,
-    description=(u'Markdown-based test runner for python. '
+    description=('Markdown-based test runner for python. '
                  'Good for github projects'),
-    author=u'Gabriel Falcao',
+    author='Gabriel Falcao',
     author_email='gabriel@nacaolivre.org',
     url='http://github.com/gabrielfalcao/steadymark',
     packages=get_packages(),

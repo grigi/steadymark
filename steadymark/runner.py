@@ -47,7 +47,7 @@ if not PY3:
 
 
 class Runner(object):
-    def __init__(self, filename=None, text=u''):
+    def __init__(self, filename=None, text=''):
         if filename and not os.path.exists(filename):
             print('steadymark could not find {0}'.format(filename))
             sys.exit(1)
@@ -62,8 +62,8 @@ class Runner(object):
 
     def print_white(self, text, indentation=0):
         white = {
-            True: u'\033[1;37m',
-            False: u'',
+            True: '\033[1;37m',
+            False: '',
         }
         for line in text.splitlines():
             print("{1}{2}{0}\033[0m".format(
@@ -79,10 +79,10 @@ class Runner(object):
             return super(Runner, self).__getattribute__(attr)
 
         color_for = {
-            'print_white': u'\033[1;37m',
-            'print_red': u'\033[1;31m',
-            'print_green': u'\033[1;32m',
-            'print_yellow': u'\033[1;33m',
+            'print_white': '\033[1;37m',
+            'print_red': '\033[1;31m',
+            'print_green': '\033[1;32m',
+            'print_yellow': '\033[1;33m',
         }
         ansi = color_for[attr]
         if SUPPORTS_ANSI:
@@ -112,17 +112,17 @@ class Runner(object):
         # if 'None' == formatted_tb:
         formatted_tb = ''.join(traceback.format_tb(tb))
         formatted_tb = formatted_tb.replace(
-            u'File "{0}"'.format(test.title),
-            u'In the test "{0}"'.format(test.title),
+            'File "{0}"'.format(test.title),
+            'In the test "{0}"'.format(test.title),
         )
         formatted_tb = formatted_tb.replace(
-            u'@STEADYMARK@', text_type(test.title))
+            '@STEADYMARK@', text_type(test.title))
 
         if SUPPORTS_ANSI:
             color = '\033[1;36m'
         else:
             color = ''
-        return u'{0} {3}{1}\n{2}\n'.format(
+        return '{0} {3}{1}\n{2}\n'.format(
             exc.__name__,
             exc_instance,
             formatted_tb,
@@ -138,7 +138,7 @@ class Runner(object):
         exc_type, exc_val, exc_tb = failure
 
         if exc_type is DocTestFailure:
-            formatted_tb = u"the line {0}: {1}\n".format(
+            formatted_tb = "the line {0}: {1}\n".format(
                 exc_val.example.lineno,
                 exc_val.example.source,
             )

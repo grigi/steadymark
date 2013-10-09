@@ -30,10 +30,10 @@ from steadymark.core import SteadyMark
 
 
 def test_find_python_code_with_titles():
-    (u"SteadyMark should find python code and use the "
+    ("SteadyMark should find python code and use the "
      "previous header as title")
 
-    md = u"""# test 1
+    md = """# test 1
 a paragraph
 
 ```python
@@ -75,10 +75,10 @@ assert False, 'uh yeah'
 
 
 def test_find_inline_doctests_with_titles():
-    (u"SteadyMark should find docstrings and use the "
+    ("SteadyMark should find docstrings and use the "
      "previous header as title")
 
-    md = u"""# test 1
+    md = """# test 1
 a paragraph
 
 ```python
@@ -125,9 +125,9 @@ assert False, 'uh yeah'
 
 
 def test_use_same_title_for_all_tests():
-    (u"SteadyMark should find all the tests under the same header (title)")
+    ("SteadyMark should find all the tests under the same header (title)")
 
-    md = u"""# Test Foo
+    md = """# Test Foo
 a paragraph
 
 ```python
@@ -161,9 +161,9 @@ assert False, 'THIRD'
 
 
 def test_skip_tests_marked_with_ignore():
-    (u"SteadyMark should skip tests with the 'ignore' modeline")
+    ("SteadyMark should skip tests with the 'ignore' modeline")
 
-    md = u"""# My test
+    md = """# My test
 ```python
 # steadymark: ignore
 This should break, but it won't because steady mark will ignore this

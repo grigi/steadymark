@@ -42,7 +42,7 @@ def run(path):
 
 
 def test_failure_exits_with_1():
-    (u"SteadyMark should exit with status 1 in case of failure")
+    ("SteadyMark should exit with status 1 in case of failure")
 
     path = join(CURDIR, 'fails.md')
     run.when.called_with(path).should.throw(
@@ -50,7 +50,7 @@ def test_failure_exits_with_1():
 
 
 def test_success_exits_with_0():
-    (u"SteadyMark should exit with status 0 in case of success")
+    ("SteadyMark should exit with status 0 in case of success")
 
     status = run(join(CURDIR, 'passes.md'))
     status.should.equal(0)
