@@ -1,5 +1,5 @@
 # Steady Mark
-> version 0.4.5
+> version 0.4.6
 [![Build Status](https://secure.travis-ci.org/gabrielfalcao/steadymark.png?branch=master)](http://travis-ci.org/#!/gabrielfalcao/steadymark)
 
 ![meme](http://cdn.memegenerator.net/instances/400x/24908847.jpg)
@@ -64,10 +64,10 @@ Just run with:
 $ steadymark README.md
 ```
 
-# Steadymark is on version 0.4.5
+# Steadymark is on version 0.4.6
 
 ```python
 >>> from sure import expect
 >>> from steadymark import version
->>> assert expect(version).should.equal("0.4.5")
+>>> assert expect(version).should.equal("0.4.6")
 ```
