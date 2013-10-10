@@ -5,5 +5,5 @@ ipdb==0.7
 ipython==0.13
 misaka==1.0.2
 nose==1.1.2
-sure==1.1.7
+git+git://github.com/grigi/sure.git@master#egg=sure == 1.2.3
 tox==1.4.2
